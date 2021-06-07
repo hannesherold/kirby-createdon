@@ -16,13 +16,13 @@ Download and copy this repository to `/site/plugins/createdon`.
 ### Git submodule
 
 ```
-git submodule add https://github.com/{{ your-name }}/{{ plugin-name }}.git site/plugins/{{ plugin-name }}
+git submodule add https://github.com/hannesherold/createdon.git site/plugins/createdon
 ```
 
 ### Composer
 
 ```
-composer require {{ your-name }}/{{ plugin-name }}
+composer require hherold/createdon
 ```
 
 ## Options
