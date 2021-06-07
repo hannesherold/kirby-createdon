@@ -3,6 +3,8 @@
 
 Simple Kirby 3 Plugin to store date and time when the page was created ("created on") with optional setting of parent page.
 
+## Why?
+
 My use case is a website project with a database-like content section. All child pages in the folder „database“ (and their children) form data-base entries. Some of these pages need the date and time of creation stored automatically. This is why you can optionally set a parent-page.
 
 ## Installation
