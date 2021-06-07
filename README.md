@@ -1,7 +1,6 @@
-# Createdon
+# createdon
 
-
-Simple Kirby 3 Plugin to store date and time when the page was created ("created on") with optional setting of parent page.
+Simple Kirby 3 Plugin to store date and time when the page was created ("created on") with optional parent page.
 
 ## Why?
 
