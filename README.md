@@ -60,7 +60,7 @@ In your blueprint, best way to output would be a disabled date field:
 
 
 ```yaml
-timestamp:
+createdon:
  label   : Page created at
  type    : date
  display : DD.MM.YYYY
