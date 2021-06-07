@@ -1,5 +1,5 @@
 {
-    "name": "hherold/createdon",
+    "name": "hherold/kirby-createdon",
     "description": "Simple Kirby 3 Plugin to store date and time when the page was created with optional setting of parent page.",
     "type": "kirby-plugin",
     "license": "MIT",
@@ -11,5 +11,8 @@
     ],
     "require": {
         "getkirby/composer-installer": "^1.1"
+    },
+    "extra": {
+        "installer-name": "createdon"
     }
 }
