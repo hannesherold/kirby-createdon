@@ -34,7 +34,7 @@ Use the following options in your `config.php`:
 
 
 ```php
-'hherold.timestamp' => [
+'hherold.createdon' => [
   'enabled' => true,                // default: false
   'parent' => 'database/whatever'   // default: false
 ]
