@@ -36,12 +36,15 @@ Use the following options in your `config.php`:
 ]
 ```
 
-#### `enabled`
+___enabled___
+<br>
 enables/disables the plugin
-#### `parent`
-Use `parent` if you want to restrict timestamp function to children of a specific parent. The option expects the slug of the parent.
 
-**Be careful:** if you change the actual slug of the parent-page you need to set the new slug here accordingly.
+___parent___
+<br>
+Use `parent` if you want to restrict timestamp function to children of a specific parent. The option expects the slug of the parent.
+<br>
+*Be careful* if you change the actual slug of the parent-page you need to set the new slug here accordingly.
 
 
 
@@ -69,7 +72,7 @@ timestamp:
 The plugin listens to these Kirby hooks:
 
 `page.create:after`
-
+<br>
 `page.duplicate:after`
 
 
