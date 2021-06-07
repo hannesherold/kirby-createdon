@@ -2,9 +2,11 @@
 
 Simple Kirby 3 Plugin to store date and time when the page was created ("created on") with optional parent page.
 
-## Why?
+### Why?
 
 My use case is a website project with a database-like content section. All child pages in the folder „database“ (and their children) form data-base entries. Some of these pages need the date and time of creation stored automatically. This is why you can optionally set a parent-page.
+
+<br>
 
 ## Installation
 
@@ -23,6 +25,8 @@ git submodule add https://github.com/hannesherold/createdon.git site/plugins/cre
 ```
 composer require hherold/createdon
 ```
+
+<br>
 
 ## Options
 
@@ -46,7 +50,7 @@ Use `parent` if you want to restrict timestamp function to children of a specifi
 <br>
 *Be careful* if you change the actual slug of the parent-page you need to set the new slug here accordingly.
 
-
+<br>
 
 ## Blueprint
 
@@ -65,7 +69,7 @@ timestamp:
  width   : 1/2
 ```
 
-
+<br>
 
 ## Hooks
 
@@ -75,7 +79,7 @@ The plugin listens to these Kirby hooks:
 <br>
 `page.duplicate:after`
 
-
+<br>
 
 ## Hint
 
@@ -89,12 +93,12 @@ user:
  multiple: false
 ```
 
-
 Because by design the current user is the default value for the users field, it will store the current user automatically (unless of course you specify another default value).
 
 For reference see Kirby’s documentation of the users field:
 https://getkirby.com/docs/reference/panel/fields/users#default-values
 
+<br>
 
 ## License
 
