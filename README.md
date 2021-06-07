@@ -61,12 +61,11 @@ In your blueprint, best way to output would be a disabled date field:
 
 ```yaml
 createdon:
- label   : Page created at
+ label   : Page created on
  type    : date
  display : DD.MM.YYYY
  time    : true
  disabled: true
- width   : 1/2
 ```
 
 <br>
