@@ -1,43 +1,22 @@
 <?php
-Kirby::plugin('hherold/timestamp', [
+
+require_once __DIR__ . '/src/functions.php';
+
+Kirby::plugin('hherold/createdon', [
   'options' => [
-    'enabled' => false,
-    'parent'  => false
+    'parent' => false,
+    'files'  => false,
+    'pages'  => false
   ],
   'hooks' => [
     'page.create:after' => function ($page) {
-      $enabled = option('hherold.timestamp.enabled');
-      $parent  = option('hherold.timestamp.parent');
-
-      if ($enabled) {
-        if ($parent && $page->isDescendantOf(page($parent))) {
-          $newPage = $page->update([
-            'timestamp' => date('Y-m-d H:i:s'),
-          ]);
-        };
-        if ($parent == false) {
-          $newPage = $page->update([
-            'timestamp' => date('Y-m-d H:i:s'),
-          ]);
-        }
-      }
+      pageCreatedon($page);
     },
     'page.duplicate:after' => function ($duplicatePage, $originalPage) {
-      $enabled = option('hherold.timestamp.enabled');
-      $parent  = option('hherold.timestamp.parent');
-
-      if ($enabled) {
-        if ($parent && $duplicatePage->isDescendantOf(page($parent))) {
-          $newPage = $duplicatePage->update([
-            'timestamp' => date('Y-m-d H:i:s'),
-          ]);
-        };
-        if ($parent == false) {
-          $newPage = $duplicatePage->update([
-            'timestamp' => date('Y-m-d H:i:s'),
-          ]);
-        }
-      }
+      pageCreatedon($duplicatePage);
+    },
+    'file.create:after' => function ($file) {
+      fileCreatedon($file);
     }
   ]
 ]);

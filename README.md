@@ -1,10 +1,14 @@
 # Kirby createdon plugin
 
-Simple Kirby 3 Plugin to store date and time when the page was created ("created on") with optional parent page.
+Simple Kirby 3 Plugin to store date and time when the page was created ("created on").
+<br>
+Works with pages and files. A parent page can be set optionally. 
+
+
 
 ### Why?
 
-My use case is a website project with a database-like content section. All child pages in the folder „database“ (and their children) form data-base entries. Some of these pages need the date and time of creation stored automatically. This is why you can optionally set a parent-page.
+My use case is a website project with a database-like content section. All child pages in the folder „data“ (and their children) form data-base entries. Some of these pages and files need the date and time of creation stored automatically. This is why you can optionally set a parent-page.
 
 <br>
 
@@ -35,26 +39,38 @@ Use the following options in your `config.php`:
 
 ```php
 'hherold.createdon' => [
-  'enabled' => true,                // default: false
-  'parent' => 'database/whatever'   // default: false
+  'pages' => true,
+  'files' => true,
+  'parent' => 'data/whatever'
 ]
 ```
 
-___enabled___
+__pages__
 <br>
-enables/disables the plugin
+Enables the plugin for pages.
+<br>
+_default: false_
 
-___parent___
+__files__
 <br>
-Use `parent` if you want to restrict timestamp function to children of a specific parent. The option expects the slug of the parent.
+Enables the plugin for files.
 <br>
-*Be careful* if you change the actual slug of the parent-page you need to set the new slug here accordingly.
+_default: false_
+
+
+__parent__
+<br>
+Restricts the plugin to children of a specific parent. 
+<br>
+_Expects the slug of the parent page._
+<br>
+> Be careful if you change the actual slug of the parent-page you need to set the new slug here accordingly.
 
 <br>
 
 ## Blueprint
 
-The plugin stores date and time in a field called „timestamp“ and uses the function `date('Y-m-d H:i:s‘)`.
+The plugin stores date and time in a field called „createdon“ and uses the function `date('Y-m-d H:i:s‘)`.
 
 In your blueprint, best way to output would be a disabled date field:
 
@@ -77,6 +93,8 @@ The plugin listens to these Kirby hooks:
 `page.create:after`
 <br>
 `page.duplicate:after`
+<br>
+`file.create:after`
 
 <br>
 
