@@ -21,13 +21,13 @@ Download and copy this repository to `/site/plugins/createdon`.
 ### Git submodule
 
 ```
-git submodule add https://github.com/hannesherold/createdon.git site/plugins/createdon
+git submodule add https://github.com/hannesherold/kirby-createdon.git site/plugins/createdon
 ```
 
 ### Composer
 
 ```
-composer require hherold/createdon
+composer require hherold/kirby-createdon
 ```
 
 <br>
@@ -64,7 +64,7 @@ Restricts the plugin to children of a specific parent.
 <br>
 _Expects the slug of the parent page._
 <br>
-> Be careful if you change the actual slug of the parent-page you need to set the new slug here accordingly.
+> Be careful: if you change the actual slug of the parent-page you need to set the new slug here accordingly.
 
 <br>
 
